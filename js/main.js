@@ -15,23 +15,24 @@ createApp({
   },
   methods: {
 
-    // FACCIO UNA RICHESTA AL SERVER 
-    request(indirizzo, array) {
-      axios.get(indirizzo)
-        .then((response) => {
-          array.push(response.data.response)
-          this.showList()
-        })
-    },
-
     // FUNZIONE CHE VISUALIZZA LA LISTA 
     showList() {
       if (this.mailList.length === this.mailNumber) {
         this.visible = true;
       }
     },
-    
-    // ESTRAI DATI DA UN API X NUMERO DI VOLTE E INSERISCILI IN UN ARRAY
+
+    // FACCIO UNA RICHESTA AL SERVER E LA INSERISCO IN UN ARRAY
+    request(indirizzo, array) {
+      axios.get(indirizzo)
+        .then((response) => {
+          array.push(response.data.response)
+          // MOSTRA LA LISTA DEI CONTATTI SOLO QUANDO LI CARICA TUTTI 
+          this.showList()
+        })
+    },
+
+    // ESTRAI DATI DA UN API X NUMERO DI VOLTE
     repeatRequest(number) {
       for (let i = 0; i < number; i++) {
         this.request(this.apiRandomMail, this.mailList)

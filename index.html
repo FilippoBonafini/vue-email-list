@@ -27,12 +27,16 @@
 
     <!-- APP CONTAINER-------------------------------------------------->
     <div id="app">
+        <!-- LIST  -->
         <ul v-if="visible" v-cloak>
             <li v-for="element in mailList">{{element}}</li>
         </ul>
-        <div v-else id="container">
-            <div id="loader"></div>  
-          </div>
+        <!-- /LIST  -->
+
+        <!-- LOADING SCREEN  -->
+        <div v-else id="loader"></div>
+        <!-- /LOADING SCREEN  -->
+        
     </div>
     <!-- /APP CONTAINER------------------------------------------------->
 

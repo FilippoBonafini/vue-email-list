@@ -1,6 +1,6 @@
 /* RESET  */
 /* ------ */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,9 +11,9 @@
 
 [v-cloak] {
     display: none;
-  }
+}
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100vh;
@@ -22,15 +22,17 @@ body{
     justify-content: center;
     align-items: center;
 }
-li{
+
+li {
     list-style: none;
 }
+
 /* APP */
 /* --- */
-#app{
+#app {
     background-color: rgb(63, 68, 82);
-    min-width: 400px;
-    max-width: 400px;
+    min-height: 150px;
+    min-width: 150px;
     padding: 40px;
     border-radius: 30px;
     display: flex;
@@ -38,26 +40,21 @@ li{
     align-items: center;
     box-shadow: 0px 1px 15px -2px #000000;
 }
-ul{
+
+ul {
     background-color: white;
     padding: 10px;
     border-radius: 30px;
 }
-ul li{
+
+ul li {
     padding: 5px 30px;
 }
 
 
 /* LOADING  */
-#container {
-    width: 70px;
-    height: 35px;
-    overflow: hidden;
-    position: absolute;
-    top: calc(50% - 17px);
-    left: calc(50% - 35px);
-  }
-  #loader {
+
+#loader {
     width: 70px;
     height: 70px;
     border-style: solid;
@@ -69,15 +66,27 @@ ul li{
     box-sizing: border-box;
     animation: rotate 3s ease-in-out infinite;
     transform: rotate(-200deg)
-  }
-  @keyframes rotate {
-    0% { border-width: 10px; }
-    25% { border-width: 3px; }
-    50% { 
-      transform: rotate(115deg); 
-      border-width: 10px;
-    }
-    75% { border-width: 3px;}
-    100% { border-width: 10px;}
-  }
+}
 
+@keyframes rotate {
+    0% {
+        border-width: 10px;
+    }
+
+    25% {
+        border-width: 3px;
+    }
+
+    50% {
+        transform: rotate(115deg);
+        border-width: 10px;
+    }
+
+    75% {
+        border-width: 3px;
+    }
+
+    100% {
+        border-width: 10px;
+    }
+}
